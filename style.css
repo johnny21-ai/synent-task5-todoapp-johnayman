@@ -1,0 +1,186 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f4f6f9;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 40px 16px;
+}
+
+.app {
+    background: white;
+    width: 100%;
+    max-width: 480px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 32px 28px;
+}
+
+/* Header */
+.header {
+    margin-bottom: 6px;
+}
+
+.header h1 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.date {
+    font-size: 13px;
+    color: #aaa;
+    margin-top: 2px;
+}
+
+/* Stats */
+.stats {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 20px;
+    margin-top: 8px;
+}
+
+.stats span {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: #f0f4f8;
+    color: #666;
+}
+
+/* Input row */
+.input-row {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.input-row input {
+    flex: 1;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    color: #2c3e50;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.input-row input:focus {
+    border-color: #3498db;
+}
+
+.input-row button {
+    padding: 10px 20px;
+    background: #2c3e50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.input-row button:hover {
+    background: #3d5166;
+}
+
+/* Task list */
+.task-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 14px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    transition: background 0.15s;
+    animation: slideIn 0.2s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.task-item:hover {
+    background: #fafafa;
+}
+
+/* Checkbox */
+.task-item input[type="checkbox"] {
+    width: 17px;
+    height: 17px;
+    accent-color: #1abc9c;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* Task text */
+.task-text {
+    flex: 1;
+    font-size: 14px;
+    color: #2c3e50;
+    transition: color 0.2s;
+    word-break: break-word;
+}
+
+.task-item.done .task-text {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+/* Delete button */
+.delete-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ccc;
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 2px;
+    transition: color 0.2s;
+    flex-shrink: 0;
+}
+
+.delete-btn:hover {
+    color: #e74c3c;
+}
+
+/* Empty message */
+.empty-msg {
+    text-align: center;
+    font-size: 13px;
+    color: #ccc;
+    margin-top: 24px;
+    display: none;
+}
+
+.empty-msg.visible {
+    display: block;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .app {
+        padding: 24px 18px;
+    }
+}
