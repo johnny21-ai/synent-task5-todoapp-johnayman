@@ -33,4 +33,4 @@ All tasks are stored in the browser using localStorage, so data remains even aft
 ---
 
 ## 🎥 Demo Video
-(Add your video link here)
+(https://www.linkedin.com/posts/john-ayman-b5944b37a_internship-webdevelopment-javascript-ugcPost-7457450103667089409-goxj?utm_source=share&utm_medium=member_desktop&rcm=ACoAAF2upLUBeGAJ5ydgTvPqzTXC8sPn6olUM_Q)
